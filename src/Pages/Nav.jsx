@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Magnetic from "../Pages/Magnetic";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
@@ -18,10 +18,10 @@ function Nav() {
   return (
     <div>
       <div className="nav-container">
-        <h1 className="logo">Divine Tranquility</h1>
+        <img src="/images/Union (1).svg" alt="" className="logo" />
 
         <div>
-          <nav className="nav-container">
+          <nav>
             <div>
               <Magnetic style={{ zIndex: 9999 }}>
                 <Link to="/" className="nav-link">
@@ -36,6 +36,10 @@ function Nav() {
                   About
                 </Link>
               </Magnetic>
+
+              <div className="drop-down">
+                
+              </div>
             </div>
 
             <div>
