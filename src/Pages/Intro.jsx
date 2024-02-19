@@ -4,6 +4,7 @@
 import TabNavigation from "../Pages/TabNavigation";
 import Footer from "../Pages/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BaseFooter from "../Pages/BaseFooter";
 import {
   faDroplet,
   faSpa,
@@ -121,7 +122,7 @@ function Intro() {
       <section className="wide-container">
         <div className="wide-flex">
           <div>
-            <h7>IMPRESSED WITH US?</h7>
+            <h4 className="wide-header">IMPRESSED WITH US?</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
               commodi architecto quam obcaecati unde magnam. Incidunt corrupti
@@ -152,10 +153,7 @@ function Intro() {
         <TabNavigation />
       </main>
 
-      <main>
-        {" "}
-        <Footer />
-      </main>
+      
     </div>
   );
 }

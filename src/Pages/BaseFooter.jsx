@@ -102,10 +102,6 @@ const BaseFooter = ({ pos }) => {
             <p className="base-description">VERSION</p>
             <p className="base-value">{year}&copy;Edition</p>
           </div>
-          <div className="base-item">
-            <p className="base-description">LOCAL TIME</p>
-            <p className="base-value">Availble soon</p>
-          </div>
         </div>
         <div className="base-group">
           <div className="base-item">
@@ -151,7 +147,7 @@ const BaseFooter = ({ pos }) => {
 
       <hr />
       <p className="copyright">
-        &copy; {year} Portfolio - Adegbasa Favour. All rights reserved
+        &copy; {year} Portfolio - D_SPA. All rights reserved
       </p>
     </StyledDiv>
   );

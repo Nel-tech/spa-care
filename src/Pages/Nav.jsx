@@ -1,11 +1,13 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Magnetic from "../Pages/Magnetic";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Magnetic from "./Magnetic";
+
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 
 function Nav() {
   // const [mobileNav, setMobileNav] = useState(/* initial state */);
+  const [dropDown, SetDropDown] = useState(false);
 
   // function toggleNavbar() {
   //   setMobileNav(!mobileNav);
@@ -15,6 +17,10 @@ function Nav() {
   //   setMobileNav(false);
   // }
 
+  function DropDown() {
+    SetDropDown(!dropDown);
+  }
+
   return (
     <div>
       <div className="nav-container">
@@ -23,7 +29,7 @@ function Nav() {
         <div>
           <nav>
             <div>
-              <Magnetic style={{ zIndex: 9999 }}>
+              <Magnetic>
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
@@ -36,20 +42,44 @@ function Nav() {
                   About
                 </Link>
               </Magnetic>
-
-              <div className="drop-down">
-                
-              </div>
             </div>
 
             <div>
-              <Magnetic style={{ zIndex: 9999 }}>
-                <Link to="/services" className="nav-link">
-                  Services
-                </Link>
+              <Magnetic>
+                <div className="nav-link" onClick={DropDown}>
+                  ShowCase
+                </div>
               </Magnetic>
-            </div>
 
+              <div className={`drop-down ${dropDown ? "open" : "close"}`}>
+                <div>
+                  <Magnetic style={{ zIndex: 9999 }}>
+                    <Link to="/services" className="drop-down-link">
+                      Services
+                    </Link>
+                  </Magnetic>
+                  <div className="line"></div>
+                </div>
+
+                <div>
+                  <Magnetic style={{ zIndex: 9999 }}>
+                    <Link to="/gallery" className="drop-down-link">
+                      Gallery
+                    </Link>
+                  </Magnetic>
+                  <div className="line"></div>
+                </div>
+
+                <div>
+                  <Magnetic style={{ zIndex: 9999 }}>
+                    <Link to="/experts" className="drop-down-link">
+                      Our Experts
+                    </Link>
+                  </Magnetic>
+                  <div className="line"></div>
+                </div>
+              </div>
+            </div>
             <div>
               <Magnetic style={{ zIndex: 9999 }}>
                 <Link to="/appointment" className="nav-link">

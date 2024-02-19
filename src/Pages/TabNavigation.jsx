@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { FontAwesomeIcon as FAIcon } from "@fortawesome/react-fontawesome";
-import {
-  faDroplet,
-  faBucket,
-  faFlask,
-  faFaceSmile,
-} from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon as FAIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faDroplet,
+//   faBucket,
+//   faFlask,
+//   faFaceSmile,
+// } from "@fortawesome/free-solid-svg-icons";
 
 const content = [
   {
@@ -38,7 +38,12 @@ const content = [
   },
 ];
 
-const iconList = [faDroplet, faBucket, faFlask, faFaceSmile];
+const iconList = [
+  "/images/Stone_Message.jpg",
+  "/images/Massage_Oil.jpg",
+  "/images/Massage_Oil.jpg",
+  "/images/Facial.png",
+];
 
 export default function App() {
   return (
@@ -55,9 +60,10 @@ function Tabbed({ content }) {
     <div>
       <div className="tabs">
         {iconList.map((icon, index) => (
-          <FAIcon
+          <img
+            src={icon}
+            alt=""
             key={index}
-            icon={icon}
             className={`services-icon container ${
               activeTab === index ? "active" : "tab"
             }`}
@@ -77,7 +83,7 @@ function TabContent({ item }) {
   return (
     <div className="tab-content container">
       <div>
-        <h8>{item.summary}</h8>
+        <h3 className="item-header">{item.summary}</h3>
         {showDetails && <p className="services-para">{item.details}</p>}
       </div>
 

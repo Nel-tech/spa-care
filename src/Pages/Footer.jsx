@@ -5,15 +5,16 @@ import {
   faPhone,
   faMessage,
 } from "@fortawesome/free-solid-svg-icons";
+import BaseFooter from "./BaseFooter";
 
 function Footer() {
   return (
     <div>
       <footer>
-        <heading>
+        <div className="footer-section">
           <div className="header-para">
-            <h9>About</h9>
-            <p>
+            <h3>About</h3>
+            <p className="About-pagr">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               nihil architecto consectetur tempore sapiente eligendi itaque
               repellat, earum minima? Voluptas, amet tenetur! Consectetur dolor,
@@ -24,22 +25,22 @@ function Footer() {
             </p>
           </div>
 
-          <div className="header-para">
-            <h9>Contact</h9>
-            <div>
-              <FontAwesomeIcon icon={faLocation} />
+          <div className="header-para" id="footer-loc">
+            <h3>Contact</h3>
+            <div className="flex-cont">
+              <FontAwesomeIcon icon={faLocation} className="footer-icon" />
               <p>Zaria Road Kano</p>
             </div>
 
-            <div>
-              <FontAwesomeIcon icon={faPhone} />
+            <div className="flex-cont">
+              <FontAwesomeIcon icon={faPhone} className="footer-icon" />
               <p>
                 <a href="tel:+2349081715621">+2349081715621</a>
               </p>
             </div>
 
-            <div>
-              <FontAwesomeIcon icon={faMessage} />
+            <div className="flex-cont">
+              <FontAwesomeIcon icon={faMessage} className="footer-icon" />
               <p>
                 {" "}
                 <a href="mailto:favournelson82@gmail.com">D_SPA@gmail.com</a>
@@ -47,16 +48,25 @@ function Footer() {
             </div>
           </div>
 
-          <div className="header-para">
-            <h9>NEWSLETTER</h9>
-            <p>Sign up to our weekly newsletter list</p>
+          <div className="header-para" id="form-footer">
+            <h3>NEWSLETTER</h3>
+            <p className="form-heading">
+              Sign up to our weekly newsletter list
+            </p>
 
             <form action="">
-              <input type="email" name="" id="" required />
+              <input
+                type="email"
+                name=""
+                id=""
+                required
+                placeholder="Email Address"
+              />
               <button>GO!</button>
             </form>
           </div>
-        </heading>
+        </div>
+        {/* <BaseFooter /> */}
       </footer>
     </div>
   );
